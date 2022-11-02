@@ -3,6 +3,7 @@ from django.urls import reverse
 from rest_framework import status
 from todos.models import Todo
 
+
 class TodosAPITestCase(APITestCase):
 
     def create_todo(self):
@@ -23,7 +24,6 @@ class TodosAPITestCase(APITestCase):
 
 
 class TestListCreate(TodosAPITestCase):
-
 
     def test_should_not_create_todo_with_no_auth(self):
         response = self.create_todo()
